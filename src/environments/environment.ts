@@ -10,5 +10,6 @@ export const environment = {
       messagingSenderId: "85759780194",
       appId: "1:85759780194:web:8e6c11ed5ae34453e2f83b"
     }
-  }
+  },
+  url: 'http://localhost:5000/',
 }

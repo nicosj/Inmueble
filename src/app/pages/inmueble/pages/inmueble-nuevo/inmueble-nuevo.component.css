@@ -1,0 +1,30 @@
+mat-card {
+  width: 450px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+mat-fomr-field {
+  width: 400px;
+}
+
+.personal_photo_photo {
+  display: flex;
+  justify-content: center;
+}
+
+.photo {
+  display: inline-flex;
+  align-items: center;
+  align-content: center;
+  padding-bottom: 20px;
+  flex-direction: column;
+  border-radius: 0%;
+  width: 150px;
+  height: 150px;
+}
+.photo_img {
+  margin-bottom: 16px;
+}
+
+/*# sourceMappingURL=inmueble-nuevo.component.css.map */

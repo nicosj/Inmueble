@@ -4,11 +4,13 @@
   "scripts": {
     "ng": "ng",
     "start": "npm run start:dev",
+    "startw": "npm run wach",
     "build": "npm run build:dev",
     "watch": "ng build --watch --configuration development",
+    "wach": "ng build --watch --c=dev",
     "test": "ng test",
-    "start:dev": "ng serve --c=dev",
-    "build:dev": "ng build --c=dev",
+    "start:dev": "ng serve  --c=dev",
+    "build:dev": "ng build --watch --c=dev",
     "start:prd": "ng serve --c=prod",
     "build:prod": "ng build --c=prod"
   },

@@ -1,0 +1,136 @@
+<app-spinner *ngIf="loading$ | async "></app-spinner>
+<section fxLayoutAlign="center">
+  <mat-card>
+    <form
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      fxLayoutGap="10px"
+      #f="ngForm"
+      (ngSubmit)="registrarUsuario(f)"
+    >
+      <mat-form-field>
+        <mat-label>Ingrese Nombre</mat-label>
+        <input
+          matInput
+          placeholder="Nombre"
+          type="text"
+          name="nombre"
+          ngModel
+          required
+          #names="ngModel"
+        >
+        <mat-error *ngIf="names.invalid && (names.dirty || names.touched)">
+          <mat-error *ngIf="names.errors">El nombre es requerido</mat-error>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Ingrese Apellido</mat-label>
+        <input
+          matInput
+          placeholder="Apellido"
+          type="text"
+          name="apellido"
+          ngModel
+          required
+          #surname="ngModel"
+        >
+        <mat-error *ngIf="surname.invalid && (surname.dirty || surname.touched)">
+          <mat-error *ngIf="surname.errors">El apellido es requerido</mat-error>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Ingrese username</mat-label>
+        <input
+          matInput
+          placeholder="username"
+          type="text"
+          name="username"
+          ngModel
+          required
+          #username="ngModel"
+        >
+        <mat-error *ngIf="username.invalid && (username.dirty || username.touched)">
+          <mat-error *ngIf="username.errors">El apellido es requerido</mat-error>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Ingrese Telefono</mat-label>
+        <input
+          matInput
+          placeholder="Telefono"
+          type="number"
+          name="telefono"
+          ngModel
+          required
+          #telefono="ngModel"
+        >
+        <mat-error *ngIf="telefono.invalid && (telefono.dirty || telefono.touched)">
+          <mat-error *ngIf="telefono.errors">El apellido es requerido</mat-error>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Ingrese Correo</mat-label>
+        <input
+          matInput
+          placeholder="Correo electronico"
+          type="email"
+          name="email"
+          ngModel
+          required
+          email
+          #email="ngModel"
+        >
+        <mat-error *ngIf="email.invalid && (email.dirty || email.touched)">
+          <mat-error *ngIf="email.errors">El email es requerido</mat-error>
+          <mat-error *ngIf="email.errors">El email no es valido</mat-error>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Ingrese Contraseña</mat-label>
+        <input
+          matInput
+          placeholder="Contraseña"
+          type="password"
+          name="password"
+          ngModel
+          required
+          minlength="8"
+          #password="ngModel"
+        >
+        <mat-error *ngIf="password.invalid && (password.dirty || password.touched)">
+          <mat-error *ngIf="password.errors">La contraseña es requerida</mat-error>
+          <mat-error *ngIf="password.errors">La contraseña debe tener al menos 8 caracteres</mat-error>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Confirme Contraseña</mat-label>
+        <input
+          matInput
+          placeholder="Confirme Contraseña"
+          type="password"
+          name="repassword"
+          ngModel
+          required
+          minlength="8"
+          #repassword="ngModel"
+        >
+        <mat-error *ngIf="repassword.invalid && (repassword.dirty || repassword.touched)">
+          <mat-error *ngIf="repassword.errors">La contraseña es requerida</mat-error>
+          <mat-error *ngIf="repassword.errors">La contraseña debe tener al menos 8 caracteres</mat-error>
+        </mat-error>
+      </mat-form-field>
+
+      <button
+        mat-raised-button
+        color="accent"
+
+        type="submit"
+      >Registrarse
+      </button>
+
+    </form>
+  </mat-card>
+
+</section>

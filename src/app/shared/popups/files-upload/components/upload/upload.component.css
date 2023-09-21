@@ -1,0 +1,27 @@
+.upload {
+  padding: 12px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.05);
+  margin-top: 12px;
+}
+.upload_progress {
+  width: 100%;
+}
+.upload_progress::-webkit-progress-value {
+  transition: width 0.1s ease;
+}
+.upload_info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  diplay: inline-block;
+  margin: 2px 4px;
+}
+
+.app-a {
+  margin-right: 0;
+}
+
+/*# sourceMappingURL=upload.component.css.map */

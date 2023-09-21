@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+.mat-snackbar_error {
+  background-color: #B00020;
+  color: #fff;
+}
+.mat-snackbar_success {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: white;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=styles.css.map */

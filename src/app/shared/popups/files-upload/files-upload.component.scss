@@ -1,0 +1,54 @@
+@import '../../../../styes/colors';
+.files-upload{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  padding:20px;
+  overflow:hidden;
+  &_header{
+    margin-bottom: 12px;
+  }
+  &_content{
+    flex-grow: 1;
+  }
+  &_footer{
+   display:inline-flex;
+    flex-direction:row-reverse;
+    margin-top: 12px;
+  }
+
+}
+.dropzone{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border: 2px dashed $primaryColorLight;
+  border-radius: 5px;
+  padding: 20px;
+
+  &_hovered{
+    border: 2px solid $primaryColor;
+    .dropzone_label, .dropzone_file{
+      opacity: 0.3;
+    }
+
+  }
+}
+.file{
+  &_input{
+    display:none;
+  }
+  &_label{
+    color:$primaryColor;
+    padding: 10px;
+    &:hover{
+      color:$primaryColorDark;
+      cursor:pointer;
+    }
+  }
+}
+.error{
+  color:$error;
+  text-align:center;
+  padding: 12px;
+}

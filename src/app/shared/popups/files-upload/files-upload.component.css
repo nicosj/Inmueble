@@ -1,0 +1,53 @@
+.files-upload {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 20px;
+  overflow: hidden;
+}
+.files-upload_header {
+  margin-bottom: 12px;
+}
+.files-upload_content {
+  flex-grow: 1;
+}
+.files-upload_footer {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  margin-top: 12px;
+}
+
+.dropzone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #58a5f0;
+  border-radius: 5px;
+  padding: 20px;
+}
+.dropzone_hovered {
+  border: 2px solid #0277bd;
+}
+.dropzone_hovered .dropzone_label, .dropzone_hovered .dropzone_file {
+  opacity: 0.3;
+}
+
+.file_input {
+  display: none;
+}
+.file_label {
+  color: #0277bd;
+  padding: 10px;
+}
+.file_label:hover {
+  color: #015384;
+  cursor: pointer;
+}
+
+.error {
+  color: #B00020;
+  text-align: center;
+  padding: 12px;
+}
+
+/*# sourceMappingURL=files-upload.component.css.map */

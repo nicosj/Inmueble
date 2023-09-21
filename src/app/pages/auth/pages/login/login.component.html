@@ -1,0 +1,60 @@
+<app-spinner *ngIf="loading$|async"></app-spinner>
+<section fxLayoutAlign="center" >
+  <mat-card>
+    <form
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    fxLayoutGap="10px"
+    #f="ngForm"
+    (ngSubmit)="loginUsuario(f)"
+    >
+    <mat-form-field>
+      <mat-label>Ingrese Correo</mat-label>
+      <input
+      matInput
+      placeholder="Correo electronico"
+      type="email"
+      name="email"
+      ngModel
+      required
+      email
+      #email="ngModel"
+      >
+      <mat-error *ngIf="email.invalid && (email.dirty || email.touched)">
+        <mat-error *ngIf="email.errors">El email es requerido</mat-error>
+        <mat-error *ngIf="email.errors">El email no es valido</mat-error>
+      </mat-error>
+    </mat-form-field>
+      <mat-form-field>
+        <mat-label>Ingrese Contraseña</mat-label>
+        <input
+        matInput
+        placeholder="Contraseña"
+        type="password"
+        name="password"
+        ngModel
+        required
+        minlength="6"
+        #password="ngModel"
+        >
+        <mat-error *ngIf="password.invalid && (password.dirty || password.touched)">
+          <mat-error *ngIf="password.errors">La contraseña es requerida</mat-error>
+          <mat-error *ngIf="password.errors">La contraseña debe tener al menos 6 caracteres</mat-error>
+        </mat-error>
+      </mat-form-field>
+      <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      >Ingresar</button>
+      <button
+      mat-raised-button
+      color="accent"
+      type="button"
+
+      >Registrarse</button>
+
+    </form>
+  </mat-card>
+
+</section>
